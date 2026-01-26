@@ -31,9 +31,9 @@ tauri-plugin-redb-cache = { path = "../tauri-plugin-redb-cache" }
 #### JavaScript/TypeScript
 
 ```bash
-npm install tauri-plugin-redb-cache-api
+npm install @bishen/tauri-plugin-redb-cache-api
 # or
-pnpm add tauri-plugin-redb-cache-api
+pnpm add @bishen/tauri-plugin-redb-cache-api
 ```
 
 ### Usage
@@ -62,7 +62,7 @@ fn main() {
 import { 
     cacheGet, cacheSet, getCacheInfo,
     imageCacheGet, imageCacheSet 
-} from 'tauri-plugin-redb-cache-api';
+} from '@bishen/tauri-plugin-redb-cache-api';
 
 // HTTP Cache
 await cacheSet('api/users', new Uint8Array([...]));
@@ -178,9 +178,9 @@ tauri-plugin-redb-cache = { path = "../tauri-plugin-redb-cache" }
 #### JavaScript/TypeScript
 
 ```bash
-npm install tauri-plugin-redb-cache-api
+npm install @bishen/tauri-plugin-redb-cache-api
 # 或
-pnpm add tauri-plugin-redb-cache-api
+pnpm add @bishen/tauri-plugin-redb-cache-api
 ```
 
 ### 使用方式
@@ -209,7 +209,7 @@ fn main() {
 import { 
     cacheGet, cacheSet, getCacheInfo,
     imageCacheGet, imageCacheSet 
-} from 'tauri-plugin-redb-cache-api';
+} from '@bishen/tauri-plugin-redb-cache-api';
 
 // HTTP 缓存
 await cacheSet('api/users', new Uint8Array([...]));
