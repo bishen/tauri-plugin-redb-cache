@@ -1,0 +1,25 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node.js (guest-js)
+guest-js/node_modules/
+guest-js/dist/
+guest-js/*.tgz
+
+# Logs
+*.log
+
+# Debug
+debug/
+*.pdb

@@ -1,0 +1,41 @@
+{
+  "name": "tauri-plugin-redb-cache-api",
+  "version": "0.1.0",
+  "description": "JavaScript/TypeScript bindings for tauri-plugin-redb-cache",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "tauri",
+    "plugin",
+    "cache",
+    "redb",
+    "offline"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "BiShen",
+    "email": "bishen@live.com",
+    "url": "https://www.suanjinshan.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bishen/tauri-plugin-redb-cache"
+  },
+  "homepage": "https://www.suanjinshan.com/"
+}
