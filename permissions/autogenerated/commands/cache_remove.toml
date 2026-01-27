@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-cache-remove"
+description = "Enables the cache_remove command without any pre-configured scope."
+commands.allow = ["cache_remove"]
+
+[[permission]]
+identifier = "deny-cache-remove"
+description = "Denies the cache_remove command without any pre-configured scope."
+commands.deny = ["cache_remove"]

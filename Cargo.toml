@@ -1,6 +1,7 @@
 [package]
 name = "tauri-plugin-redb-cache"
-version = "0.1.1"
+version = "0.1.2"
+links = "tauri-plugin-redb-cache"
 description = "A Tauri plugin for HTTP and image caching using Redb with LRU memory cache and compression"
 authors = ["BiShen <bishen@live.com>"]
 edition = "2021"
@@ -23,4 +24,5 @@ rmp-serde = "1.3"
 flate2 = "1.0"
 dirs = "5"
 
-# No build dependencies needed for simple plugins
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }

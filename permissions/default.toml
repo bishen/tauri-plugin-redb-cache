@@ -1,0 +1,18 @@
+[default]
+description = "Default permissions for redb-cache plugin - allows all cache operations"
+permissions = [
+    "allow-cache-get",
+    "allow-cache-set",
+    "allow-cache-remove",
+    "allow-cache-clear",
+    "allow-cache-clean-expired",
+    "allow-cache-info",
+    "allow-cache-list",
+    "allow-image-cache-get",
+    "allow-image-cache-set",
+    "allow-image-cache-remove",
+    "allow-image-cache-clean-expired",
+    "allow-image-cache-clear",
+    "allow-image-cache-info",
+    "allow-image-cache-list",
+]

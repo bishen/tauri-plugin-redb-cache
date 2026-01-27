@@ -1,12 +1,32 @@
 # tauri-plugin-redb-cache
 
+[![Crates.io](https://img.shields.io/crates/v/tauri-plugin-redb-cache.svg)](https://crates.io/crates/tauri-plugin-redb-cache)
+[![License](https://img.shields.io/crates/l/tauri-plugin-redb-cache.svg)](LICENSE)
+
 [English](#english) | [中文](#中文)
 
 ---
 
 ## English
 
-A Tauri plugin for HTTP and image caching using [Redb](https://github.com/cberner/redb) with LRU memory cache and compression.
+A Tauri 2 plugin for HTTP and image caching using [Redb](https://github.com/cberner/redb) with LRU memory cache and compression.
+
+### Platform Support
+
+| Platform | Supported |
+|----------|-----------|
+| Windows  | ✅        |
+| macOS    | ✅        |
+| Linux    | ✅        |
+| Android  | ✅        |
+| iOS      | ✅        |
+
+### Compatibility
+
+| Plugin Version | Tauri Version |
+|----------------|---------------|
+| 0.1.2+         | ^2.0          |
+| 0.1.0-0.1.1    | ^2.0 (no permissions) |
 
 ### Features
 
@@ -25,15 +45,42 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
+tauri-plugin-redb-cache = "0.1.2"
+```
+
+Or use a local path:
+
+```toml
+[dependencies]
 tauri-plugin-redb-cache = { path = "../tauri-plugin-redb-cache" }
 ```
 
-#### JavaScript/TypeScript
+#### Permissions (Tauri 2 Required)
+
+Add to your `src-tauri/capabilities/default.json`:
+
+```json
+{
+  "permissions": [
+    "redb-cache:default"
+  ]
+}
+```
+
+#### JavaScript/TypeScript (Optional)
 
 ```bash
 npm install @bishen/tauri-plugin-redb-cache-api
 # or
 pnpm add @bishen/tauri-plugin-redb-cache-api
+```
+
+Or call directly via `invoke`:
+
+```typescript
+import { invoke } from '@tauri-apps/api/core';
+
+const result = await invoke('plugin:redb-cache|cache_get', { key: 'mykey' });
 ```
 
 ### Usage
@@ -153,7 +200,24 @@ console.log(`${info.count} entries, ${info.size_bytes} bytes`);
 
 ## 中文
 
-基于 [Redb](https://github.com/cberner/redb) 的 Tauri 缓存插件，支持 LRU 内存缓存和数据压缩。
+基于 [Redb](https://github.com/cberner/redb) 的 Tauri 2 缓存插件，支持 LRU 内存缓存和数据压缩。
+
+### 平台支持
+
+| 平台 | 支持 |
+|------|------|
+| Windows | ✅ |
+| macOS | ✅ |
+| Linux | ✅ |
+| Android | ✅ |
+| iOS | ✅ |
+
+### 版本兼容
+
+| 插件版本 | Tauri 版本 |
+|----------|------------|
+| 0.1.2+   | ^2.0       |
+| 0.1.0-0.1.1 | ^2.0 (无权限系统) |
 
 ### 特性
 
@@ -172,15 +236,42 @@ console.log(`${info.count} entries, ${info.size_bytes} bytes`);
 
 ```toml
 [dependencies]
+tauri-plugin-redb-cache = "0.1.2"
+```
+
+或使用本地路径：
+
+```toml
+[dependencies]
 tauri-plugin-redb-cache = { path = "../tauri-plugin-redb-cache" }
 ```
 
-#### JavaScript/TypeScript
+#### 权限配置 (Tauri 2 必需)
+
+在 `src-tauri/capabilities/default.json` 中添加：
+
+```json
+{
+  "permissions": [
+    "redb-cache:default"
+  ]
+}
+```
+
+#### JavaScript/TypeScript (可选)
 
 ```bash
 npm install @bishen/tauri-plugin-redb-cache-api
 # 或
 pnpm add @bishen/tauri-plugin-redb-cache-api
+```
+
+或直接通过 `invoke` 调用：
+
+```typescript
+import { invoke } from '@tauri-apps/api/core';
+
+const result = await invoke('plugin:redb-cache|cache_get', { key: 'mykey' });
 ```
 
 ### 使用方式

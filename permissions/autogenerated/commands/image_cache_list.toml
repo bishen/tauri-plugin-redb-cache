@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-image-cache-list"
+description = "Enables the image_cache_list command without any pre-configured scope."
+commands.allow = ["image_cache_list"]
+
+[[permission]]
+identifier = "deny-image-cache-list"
+description = "Denies the image_cache_list command without any pre-configured scope."
+commands.deny = ["image_cache_list"]

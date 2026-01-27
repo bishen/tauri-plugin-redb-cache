@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-image-cache-clean-expired"
+description = "Enables the image_cache_clean_expired command without any pre-configured scope."
+commands.allow = ["image_cache_clean_expired"]
+
+[[permission]]
+identifier = "deny-image-cache-clean-expired"
+description = "Denies the image_cache_clean_expired command without any pre-configured scope."
+commands.deny = ["image_cache_clean_expired"]

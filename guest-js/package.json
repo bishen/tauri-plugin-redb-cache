@@ -1,6 +1,6 @@
 {
   "name": "@bishen/tauri-plugin-redb-cache-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JavaScript/TypeScript bindings for tauri-plugin-redb-cache",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

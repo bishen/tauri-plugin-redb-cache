@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-image-cache-info"
+description = "Enables the image_cache_info command without any pre-configured scope."
+commands.allow = ["image_cache_info"]
+
+[[permission]]
+identifier = "deny-image-cache-info"
+description = "Denies the image_cache_info command without any pre-configured scope."
+commands.deny = ["image_cache_info"]
