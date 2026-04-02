@@ -13,6 +13,14 @@ const COMMANDS: &[&str] = &[
     "image_cache_clear",
     "image_cache_info",
     "image_cache_list",
+    "cache_ns_get",
+    "cache_ns_set",
+    "cache_ns_remove",
+    "cache_ns_get_batch",
+    "cache_ns_set_batch",
+    "cache_ns_get_by_prefix",
+    "cache_ns_remove_by_prefix",
+    "cache_ns_clear",
 ];
 
 fn main() {

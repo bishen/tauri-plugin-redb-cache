@@ -7,6 +7,13 @@ use crate::cache::{
     image_cache_clean_expired_impl, image_cache_clear_impl, image_cache_info_impl, image_cache_list_impl,
     CacheInfo, CacheItem,
 };
+use crate::ns_cache::{
+    ns_cache_get_impl, ns_cache_set_impl, ns_cache_remove_impl,
+    ns_cache_get_batch_impl, ns_cache_set_batch_impl,
+    ns_cache_get_by_prefix_impl, ns_cache_remove_by_prefix_impl,
+    ns_cache_clear_impl,
+    NsCacheSetEntry, NsCacheResult,
+};
 
 // ==================== HTTP Cache Commands ====================
 
@@ -80,4 +87,54 @@ pub fn image_cache_info() -> Result<CacheInfo, String> {
 #[tauri::command]
 pub fn image_cache_list() -> Result<Vec<CacheItem>, String> {
     image_cache_list_impl()
+}
+
+// ==================== Namespace Cache Commands ====================
+
+#[tauri::command]
+pub fn cache_ns_get(ns: String, key: String) -> Result<Option<serde_json::Value>, String> {
+    ns_cache_get_impl(ns, key)
+}
+
+#[tauri::command]
+pub fn cache_ns_set(
+    ns: String,
+    key: String,
+    value: serde_json::Value,
+    ttl_ms: Option<u64>,
+) -> Result<(), String> {
+    ns_cache_set_impl(ns, key, value, ttl_ms)
+}
+
+#[tauri::command]
+pub fn cache_ns_remove(ns: String, key: String) -> Result<(), String> {
+    ns_cache_remove_impl(ns, key)
+}
+
+#[tauri::command]
+pub fn cache_ns_get_batch(
+    ns: String,
+    keys: Vec<String>,
+) -> Result<Vec<Option<serde_json::Value>>, String> {
+    ns_cache_get_batch_impl(ns, keys)
+}
+
+#[tauri::command]
+pub fn cache_ns_set_batch(ns: String, entries: Vec<NsCacheSetEntry>) -> Result<(), String> {
+    ns_cache_set_batch_impl(ns, entries)
+}
+
+#[tauri::command]
+pub fn cache_ns_get_by_prefix(ns: String, prefix: String) -> Result<Vec<NsCacheResult>, String> {
+    ns_cache_get_by_prefix_impl(ns, prefix)
+}
+
+#[tauri::command]
+pub fn cache_ns_remove_by_prefix(ns: String, prefix: String) -> Result<u64, String> {
+    ns_cache_remove_by_prefix_impl(ns, prefix)
+}
+
+#[tauri::command]
+pub fn cache_ns_clear(ns: String) -> Result<u64, String> {
+    ns_cache_clear_impl(ns)
 }

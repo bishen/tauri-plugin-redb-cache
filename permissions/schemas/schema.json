@@ -355,6 +355,102 @@
           "markdownDescription": "Denies the cache_list command without any pre-configured scope."
         },
         {
+          "description": "Enables the cache_ns_clear command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-clear",
+          "markdownDescription": "Enables the cache_ns_clear command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_clear command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-clear",
+          "markdownDescription": "Denies the cache_ns_clear command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_get command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-get",
+          "markdownDescription": "Enables the cache_ns_get command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_get command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-get",
+          "markdownDescription": "Denies the cache_ns_get command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_get_batch command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-get-batch",
+          "markdownDescription": "Enables the cache_ns_get_batch command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_get_batch command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-get-batch",
+          "markdownDescription": "Denies the cache_ns_get_batch command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_get_by_prefix command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-get-by-prefix",
+          "markdownDescription": "Enables the cache_ns_get_by_prefix command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_get_by_prefix command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-get-by-prefix",
+          "markdownDescription": "Denies the cache_ns_get_by_prefix command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_remove command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-remove",
+          "markdownDescription": "Enables the cache_ns_remove command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_remove command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-remove",
+          "markdownDescription": "Denies the cache_ns_remove command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_remove_by_prefix command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-remove-by-prefix",
+          "markdownDescription": "Enables the cache_ns_remove_by_prefix command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_remove_by_prefix command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-remove-by-prefix",
+          "markdownDescription": "Denies the cache_ns_remove_by_prefix command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_set command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-set",
+          "markdownDescription": "Enables the cache_ns_set command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_set command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-set",
+          "markdownDescription": "Denies the cache_ns_set command without any pre-configured scope."
+        },
+        {
+          "description": "Enables the cache_ns_set_batch command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-cache-ns-set-batch",
+          "markdownDescription": "Enables the cache_ns_set_batch command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the cache_ns_set_batch command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-cache-ns-set-batch",
+          "markdownDescription": "Denies the cache_ns_set_batch command without any pre-configured scope."
+        },
+        {
           "description": "Enables the cache_remove command without any pre-configured scope.",
           "type": "string",
           "const": "allow-cache-remove",
@@ -463,10 +559,10 @@
           "markdownDescription": "Denies the image_cache_set command without any pre-configured scope."
         },
         {
-          "description": "Default permissions for redb-cache plugin - allows all cache operations\n#### This default permission set includes:\n\n- `allow-cache-get`\n- `allow-cache-set`\n- `allow-cache-remove`\n- `allow-cache-clear`\n- `allow-cache-clean-expired`\n- `allow-cache-info`\n- `allow-cache-list`\n- `allow-image-cache-get`\n- `allow-image-cache-set`\n- `allow-image-cache-remove`\n- `allow-image-cache-clean-expired`\n- `allow-image-cache-clear`\n- `allow-image-cache-info`\n- `allow-image-cache-list`",
+          "description": "Default permissions for redb-cache plugin - allows all cache operations\n#### This default permission set includes:\n\n- `allow-cache-get`\n- `allow-cache-set`\n- `allow-cache-remove`\n- `allow-cache-clear`\n- `allow-cache-clean-expired`\n- `allow-cache-info`\n- `allow-cache-list`\n- `allow-image-cache-get`\n- `allow-image-cache-set`\n- `allow-image-cache-remove`\n- `allow-image-cache-clean-expired`\n- `allow-image-cache-clear`\n- `allow-image-cache-info`\n- `allow-image-cache-list`\n- `allow-cache-ns-get`\n- `allow-cache-ns-set`\n- `allow-cache-ns-remove`\n- `allow-cache-ns-get-batch`\n- `allow-cache-ns-set-batch`\n- `allow-cache-ns-get-by-prefix`\n- `allow-cache-ns-remove-by-prefix`\n- `allow-cache-ns-clear`",
           "type": "string",
           "const": "default",
-          "markdownDescription": "Default permissions for redb-cache plugin - allows all cache operations\n#### This default permission set includes:\n\n- `allow-cache-get`\n- `allow-cache-set`\n- `allow-cache-remove`\n- `allow-cache-clear`\n- `allow-cache-clean-expired`\n- `allow-cache-info`\n- `allow-cache-list`\n- `allow-image-cache-get`\n- `allow-image-cache-set`\n- `allow-image-cache-remove`\n- `allow-image-cache-clean-expired`\n- `allow-image-cache-clear`\n- `allow-image-cache-info`\n- `allow-image-cache-list`"
+          "markdownDescription": "Default permissions for redb-cache plugin - allows all cache operations\n#### This default permission set includes:\n\n- `allow-cache-get`\n- `allow-cache-set`\n- `allow-cache-remove`\n- `allow-cache-clear`\n- `allow-cache-clean-expired`\n- `allow-cache-info`\n- `allow-cache-list`\n- `allow-image-cache-get`\n- `allow-image-cache-set`\n- `allow-image-cache-remove`\n- `allow-image-cache-clean-expired`\n- `allow-image-cache-clear`\n- `allow-image-cache-info`\n- `allow-image-cache-list`\n- `allow-cache-ns-get`\n- `allow-cache-ns-set`\n- `allow-cache-ns-remove`\n- `allow-cache-ns-get-batch`\n- `allow-cache-ns-set-batch`\n- `allow-cache-ns-get-by-prefix`\n- `allow-cache-ns-remove-by-prefix`\n- `allow-cache-ns-clear`"
         }
       ]
     }

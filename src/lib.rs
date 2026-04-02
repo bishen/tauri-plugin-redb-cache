@@ -22,6 +22,7 @@
 mod cache;
 mod commands;
 mod config;
+mod ns_cache;
 
 pub use config::{CacheConfig, Builder};
 
@@ -65,6 +66,14 @@ impl Builder {
                 commands::image_cache_clear,
                 commands::image_cache_info,
                 commands::image_cache_list,
+                commands::cache_ns_get,
+                commands::cache_ns_set,
+                commands::cache_ns_remove,
+                commands::cache_ns_get_batch,
+                commands::cache_ns_set_batch,
+                commands::cache_ns_get_by_prefix,
+                commands::cache_ns_remove_by_prefix,
+                commands::cache_ns_clear,
             ])
             .setup(|app, _api| {
                 cache::init_cache(app)?;

@@ -18,6 +18,14 @@ Default permissions for redb-cache plugin - allows all cache operations
 - `allow-image-cache-clear`
 - `allow-image-cache-info`
 - `allow-image-cache-list`
+- `allow-cache-ns-get`
+- `allow-cache-ns-set`
+- `allow-cache-ns-remove`
+- `allow-cache-ns-get-batch`
+- `allow-cache-ns-set-batch`
+- `allow-cache-ns-get-by-prefix`
+- `allow-cache-ns-remove-by-prefix`
+- `allow-cache-ns-clear`
 
 ## Permission Table
 
@@ -154,6 +162,214 @@ Enables the cache_list command without any pre-configured scope.
 <td>
 
 Denies the cache_list command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-clear`
+
+</td>
+<td>
+
+Enables the cache_ns_clear command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-clear`
+
+</td>
+<td>
+
+Denies the cache_ns_clear command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-get`
+
+</td>
+<td>
+
+Enables the cache_ns_get command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-get`
+
+</td>
+<td>
+
+Denies the cache_ns_get command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-get-batch`
+
+</td>
+<td>
+
+Enables the cache_ns_get_batch command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-get-batch`
+
+</td>
+<td>
+
+Denies the cache_ns_get_batch command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-get-by-prefix`
+
+</td>
+<td>
+
+Enables the cache_ns_get_by_prefix command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-get-by-prefix`
+
+</td>
+<td>
+
+Denies the cache_ns_get_by_prefix command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-remove`
+
+</td>
+<td>
+
+Enables the cache_ns_remove command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-remove`
+
+</td>
+<td>
+
+Denies the cache_ns_remove command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-remove-by-prefix`
+
+</td>
+<td>
+
+Enables the cache_ns_remove_by_prefix command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-remove-by-prefix`
+
+</td>
+<td>
+
+Denies the cache_ns_remove_by_prefix command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-set`
+
+</td>
+<td>
+
+Enables the cache_ns_set command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-set`
+
+</td>
+<td>
+
+Denies the cache_ns_set command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:allow-cache-ns-set-batch`
+
+</td>
+<td>
+
+Enables the cache_ns_set_batch command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`redb-cache:deny-cache-ns-set-batch`
+
+</td>
+<td>
+
+Denies the cache_ns_set_batch command without any pre-configured scope.
 
 </td>
 </tr>

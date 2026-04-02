@@ -15,4 +15,12 @@ permissions = [
     "allow-image-cache-clear",
     "allow-image-cache-info",
     "allow-image-cache-list",
+    "allow-cache-ns-get",
+    "allow-cache-ns-set",
+    "allow-cache-ns-remove",
+    "allow-cache-ns-get-batch",
+    "allow-cache-ns-set-batch",
+    "allow-cache-ns-get-by-prefix",
+    "allow-cache-ns-remove-by-prefix",
+    "allow-cache-ns-clear",
 ]

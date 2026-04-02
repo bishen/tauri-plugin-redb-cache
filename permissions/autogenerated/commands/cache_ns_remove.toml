@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-cache-ns-remove"
+description = "Enables the cache_ns_remove command without any pre-configured scope."
+commands.allow = ["cache_ns_remove"]
+
+[[permission]]
+identifier = "deny-cache-ns-remove"
+description = "Denies the cache_ns_remove command without any pre-configured scope."
+commands.deny = ["cache_ns_remove"]

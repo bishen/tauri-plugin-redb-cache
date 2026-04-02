@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-cache-ns-get-batch"
+description = "Enables the cache_ns_get_batch command without any pre-configured scope."
+commands.allow = ["cache_ns_get_batch"]
+
+[[permission]]
+identifier = "deny-cache-ns-get-batch"
+description = "Denies the cache_ns_get_batch command without any pre-configured scope."
+commands.deny = ["cache_ns_get_batch"]
